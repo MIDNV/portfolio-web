@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfolio desarrollo web</title>
+
+    <link rel="stylesheet" href="newstyle.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100..900&family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="scroll-progress"></div>
+
+    <h1 id="tituloajustado">Portfolio Desarrollo Web</h1>
+
+    <p class="parrafointro">
+        En este proyecto estoy aprendiendo a desarrollar páginas web utilizando HTML y CSS. Estoy emocionado de compartir mi progreso y conocimientos con ustedes.
+    </p>
+
+    <section class="sobre-mi-section reveal">
+    <h2 class="titulo-seccion">Sobre mí</h2>
+
+    <p class="parrafo">
+        Estoy iniciando mi carrera como desarrollador web con foco en frontend, trabajando principalmente con HTML y CSS y construyendo proyectos prácticos como este portfolio para consolidar mis bases.
+    </p>
+
+    <p class="parrafo">
+        Me especializo en la creación de interfaces web estructuradas, accesibles y visualmente limpias, aplicando buenas prácticas de maquetación, organización de código y diseño responsive.
+    </p>
+
+    <p class="parrafo">
+        Actualmente estoy ampliando mis conocimientos hacia JavaScript para poder desarrollar experiencias web más dinámicas e interactivas, con el objetivo de incorporarme al entorno profesional del desarrollo frontend.
+    </p>
+</section>
+
+    <section class="proyectos-section reveal">
+    <h2 class="proyectos">Proyectos</h2>
+
+    <p class="parrafo">
+        Este portfolio es mi primer proyecto completo, desarrollado desde cero utilizando HTML y CSS. Su objetivo es aplicar conceptos fundamentales como estructura semántica, diseño responsive y estilos modernos con CSS.
+    </p>
+
+    <p class="parrafo">
+        A través de este proyecto estoy practicando organización de código, diseño visual coherente y creación de interfaces web funcionales, con enfoque en buenas prácticas de desarrollo frontend.
+    </p>
+
+    <p class="parrafo">
+        Actualmente estoy ampliando este portfolio con nuevas secciones y mejoras progresivas, y planeo añadir proyectos adicionales que incluyan JavaScript para demostrar habilidades más avanzadas.
+    </p>
+    </section>
+
+    <section class="reveal">
+    <h2 class="habilidades">Habilidades</h2>
+
+    <p class="parrafo">
+        Estas son mis habilidades actuales y en desarrollo dentro del frontend.
+    </p>
+
+    <div class="skill">
+        <span>HTML</span>
+        <div class="bar">
+            <div class="progress html"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <span>CSS</span>
+        <div class="bar">
+            <div class="progress css"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <span>GitHub Pages</span>
+        <div class="bar">
+            <div class="progress github"></div>
+        </div>
+    </div>
+
+    <div class="skill">
+        <span>JavaScript (en progreso)</span>
+        <div class="bar">
+            <div class="progress js"></div>
+        </div>
+    </div>
+</section>
+
+    <footer class="footer">
+    <p class="footer-copy">
+        © 2026 MIDNV — Todos los derechos reservados.
+    </p>
+
+    <p class="footer-text">
+        Este portfolio es un proyecto en evolución como desarrollador frontend junior.
+    </p>
+
+    <div class="footer-links">
+
+        <a class="btn-contact"
+           href="mailto:glen.owen.diaz.thornton@gmail.com">
+            📩 Contactar por email
+        </a>
+
+        <a class="btn-linkedin"
+           href="https://www.linkedin.com/in/glen-owen-diaz-thornton-151596bb/"
+           target="_blank">
+            💼 Ver LinkedIn
+        </a>
+
+    </div>
+</footer>
+
+
+    <script>
+  const elements = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  elements.forEach(el => observer.observe(el));
+</script>
+
+<script>
+  window.onload = function () {
+    window.scrollTo(0, 0);
+  };
+</script>
+
+<script>
+  window.addEventListener("scroll", () => {
+    const scrollTop = document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+    const scrollPercent = (scrollTop / scrollHeight) * 100;
+
+    document.getElementById("scroll-progress").style.width = scrollPercent + "%";
+  });
+</script>
+
+</body>
+
+</html>
