@@ -8,7 +8,7 @@ El objetivo de este proyecto es aplicar conocimientos de maquetación web, dise�
 
 ## 🚀 Demo en vivo
 
-🔗 https://oreipingo.github.io/portfolio-web/
+🔗 [https://midnv.github.io/portfolio-web/]
 
 ---
 
